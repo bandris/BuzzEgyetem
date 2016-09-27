@@ -28,4 +28,8 @@ VALUES (current_timestamp,'2222-0000','1111-0000',999,'EUR');
 select sum(transaction_value),avg(transaction_value) from transaction;
 select transaction_currency,sum(transaction_value),avg(transaction_value),count(*) from transaction GROUP by transaction_currency;
 
+SELECT transaction_id,transaction_value FROM transaction order by transaction_value DESC;
+
+SELECT transaction_id,transaction_value FROM transaction order by transaction_value DESC LIMIT 2;
+
 delete from transaction where transaction_value < 0;

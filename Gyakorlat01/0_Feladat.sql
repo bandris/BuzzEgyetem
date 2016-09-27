@@ -1,10 +1,4 @@
-CREATE DATABASE gyakorlat1
-  WITH OWNER = ...
-       ENCODING = 'UTF8'
-       TABLESPACE = pg_default
-       LC_COLLATE = 'en_US.UTF-8'
-       LC_CTYPE = 'en_US.UTF-8'
-       CONNECTION LIMIT = -1;
+CREATE DATABASE gyakorlat1;
 
 /** DLL műveletek **/
 
@@ -20,7 +14,8 @@ CREATE TABLE auto(
   rendszam text NOT NULL,
   gyartasi_datum date NOT NULL,
   teljesitmeny integer NOT NULL,
-  CONSTRAINT auto_pk PRIMARY KEY (rendszam));
+  CONSTRAINT auto_pk PRIMARY KEY (rendszam)
+);
 
 ALTER TABLE auto ADD COLUMN forgalomban boolean default true;
 
