@@ -1,6 +1,6 @@
 CREATE DATABASE gyakorlat1;
 
-/** DLL műveletek **/
+/** DDL műveletek **/
 
 CREATE TABLE auto (
          rendszam text NOT NULL,
@@ -33,6 +33,11 @@ INSERT INTO auto
 VALUES
 ('yyy-001','2013-08-20','120',true),
 ('yyy-002','2013-01-01','130',true);
+
+/** default érték lesz a forgalomban oszlopban **/
+INSERT INTO auto (rendszam,gyartasi_datum,teljesitmeny)
+VALUES
+('zzz-111','2010-12-12',100);
 
 INSERT INTO auto
 VALUES ('xxx-000','2007-12-30','74',true);

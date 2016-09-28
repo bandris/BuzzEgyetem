@@ -1,4 +1,8 @@
-/** DLL műveletek **/
+/** DDL műveletek 
+
+ Egy dolog nem olyan szép ebben - mi?
+
+**/
 
 CREATE TABLE transaction (
     transaction_id SERIAL,
@@ -27,6 +31,10 @@ VALUES (current_timestamp,'2222-0000','1111-0000',999,'EUR');
 
 select sum(transaction_value),avg(transaction_value) from transaction;
 select transaction_currency,sum(transaction_value),avg(transaction_value),count(*) from transaction GROUP by transaction_currency;
+
+/** Ez itt SQL hibás - a account_initial csak úgy kérdezhető le, ha aggregálva van - MySQL-ben menne **/
+select transaction_currency,sum(transaction_value),avg(transaction_value),count(*),account_initial from transaction GROUP by transaction_currency;
+
 
 SELECT transaction_id,transaction_value FROM transaction order by transaction_value DESC;
 
