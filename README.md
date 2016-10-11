@@ -1,6 +1,6 @@
 # BuzzEgyetem
 
-World of Buzz által tartott egyetemi gyakorlat anyagai. Óra neve: Üzleti szoftverfejlesztés a gyakorlatban
+World of Buzz által tartott egyetemi előadások és gyakorlatok anyagai. Óra neve: Üzleti szoftverfejlesztés a gyakorlatban
 
 Feltöltés folyamatos, 2016, őszi szemeszter.
 
