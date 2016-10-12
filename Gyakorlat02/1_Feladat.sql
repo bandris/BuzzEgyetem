@@ -65,7 +65,7 @@ inner join orders o ON o.customer_id = c.customer_id;
 
 select p.current_price
 from product p
-where p.ean = (select ean from orders where customer_id = 1 GROUP BY ean order by count(*) LIMIT 1)
+where p.ean = (select ean from orders where customer_id = 1 GROUP BY ean order by count(*) DESC LIMIT 1)
 
 /** Lehozza azt a terméket, amiből rendeltek már, de most nulla a mennyisége**/
 
