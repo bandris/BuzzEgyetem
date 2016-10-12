@@ -102,10 +102,10 @@ INNER JOIN library_book b ON e.favourite_book_ean = b.ean;
 /** Lehozza azon alkalmazottakat, akiknek nincs meg a kedvenc könyvük a munkahelyükön */
 SELECT e.employee_name
 FROM library_employee e
-LEFT JOIN library_book b ON e.favourite_book_ean = b.ean
+LEFT JOIN library_book b ON e.favourite_book_ean = b.ean and e.library_id = b.library_id
 WHERE b.ean is null;
 
 /** Hozzuk le az összes alkalmazottat és az összes könyvet és kössük őket össze, ahol lehet */
 SELECT e.employee_name,b.author,b.title
 FROM library_employee e
-FULL JOIN library l ON e.favourite_book_ean = b.ean;
+FULL JOIN library_book b ON e.favourite_book_ean = b.ean;
