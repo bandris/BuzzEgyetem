@@ -73,7 +73,7 @@ BEGIN;
 INSERT INTO library_gyak3(library_name,library_postcode,library_director) VALUES ('teszt6',1414,'A Vezető');
 INSERT INTO library_gyak3(library_name,library_postcode,library_director) VALUES ('teszt7',4141,'A Vezető');
 INSERT INTO library_gyak3(library_name,library_postcode,library_director) VALUES ('teszt8',8510,'A Vezető');
-UPDATE library_gyak3 SET library_director = 'A Vezető';
+UPDATE library_gyak3 SET library_director = 'A Vezető VEzető2';
 
 select * from library_gyak3;
 
