@@ -7,6 +7,7 @@ GET     /                                       Application.index
 GET		/dummyPage1								Application.dummyPage1
 GET		/myfirstrequest							MyFirstController.controllerExercise
 GET		/mysecondrequest						MyFirstController.controllerExerciseAddition
+GET		/homework1								HomeworkController.homework1
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
