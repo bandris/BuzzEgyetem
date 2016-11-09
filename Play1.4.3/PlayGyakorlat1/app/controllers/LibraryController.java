@@ -21,8 +21,14 @@ public class LibraryController extends Controller {
 	 */
 	private static final Logger LOGGER = Logger.getLogger(LibraryController.class);
 
-	public static void libraryBooks(){
-		List<Library> libraries = Library.findAll();
+	public static void libraryBooks(Long libraryId){
+		List<Library> libraries;
+		
+		if (libraryId == null){
+			libraries = Library.findAll();
+		} else {
+			libraries = Library.find(" libraryId = ? ", libraryId).fetch();
+		}
 		
 		for (Library library : libraries){ //erre nincs szükségünk most, de írjuk csak ki, hogy mi van itt.
 			LOGGER.debug("Library processing: " + library.libraryId + " - " + library.libraryName);
