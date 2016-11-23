@@ -1,4 +1,4 @@
-package controllers;
+package controllers.library;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -69,7 +69,7 @@ public class LibraryController extends Controller {
 		}
 		
 		renderArgs.put("libraries",libraries);
-		render("@Application.libraryBooks");
+		render("@Application.library.libraryBooks");
 	}
 	
 	public static void addRandomLibrary(){

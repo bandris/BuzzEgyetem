@@ -8,10 +8,13 @@ GET		/dummyPage1								Application.dummyPage1
 GET		/myfirstrequest							MyFirstController.controllerExercise
 GET		/mysecondrequest						MyFirstController.controllerExerciseAddition
 GET		/homework1								HomeworkController.homework1
-GET		/libraryBooks							LibraryController.libraryBooks
-GET		/addRandomLibrary						LibraryController.addRandomLibrary
-GET		/addRandomLibraryBook					LibraryController.addRandomLibraryBook
-GET		/deleteRandomLibrary					LibraryController.deleteRandomLibrary
+GET		/libraryBooks							library.LibraryController.libraryBooks
+GET		/addRandomLibrary						library.LibraryController.addRandomLibrary
+GET		/addRandomLibraryBook					library.LibraryController.addRandomLibraryBook
+GET		/deleteRandomLibrary					library.LibraryController.deleteRandomLibrary
+
+GET		/createLibrary							library.LibraryCreationController.createLibraryForm
+POST	/createLibrary							library.LibraryCreationController.createLibrary
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
