@@ -16,6 +16,9 @@ GET		/deleteRandomLibrary					library.LibraryController.deleteRandomLibrary
 GET		/createLibrary							library.LibraryCreationController.createLibraryForm
 POST	/createLibrary							library.LibraryCreationController.createLibrary
 
+GET		/createLibraryBook						library.LibraryBookCreationController.createLibraryBookForm
+POST	/createLibraryBook						library.LibraryBookCreationController.createLibraryBook
+
 GET		/libraryDetails							library.LibraryDetailsControllers.libraryDetails
 # Ignore favicon requests
 GET     /favicon.ico                            404

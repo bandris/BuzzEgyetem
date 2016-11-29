@@ -3,9 +3,14 @@
 
 <h1>Könyvtárak</h1>
 
-<a href="/createLibrary">Könyvtár hozzáadása</a>
+#{if flash.errorMessage != null}
+	<div style="color:red">${flash.errorMessage}</div>
+#{/if}
 
-<table>
+<a href="/createLibrary">Könyvtár hozzáadása</a>
+<a href="/createLibraryBook">Könyv hozzáadása</a>
+
+<table style="margin-top: 10px;">
 	<tr>
 		<th>Könyvtár neve</th>
 		<th>Link</th>

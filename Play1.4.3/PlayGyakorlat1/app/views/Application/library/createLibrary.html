@@ -1,8 +1,10 @@
 #{extends 'main.html' /}
 #{set title:'Create Library' /}
 
+<h1>Könyvtár létrehozása</h1>
+
 #{ifErrors}
-   <h1>Ajjaj! Hiba volt</h1>
+   <h2>Ajjaj! Hiba volt</h2>
 #{/ifErrors}
 
 <form action="createLibrary" method="post">
