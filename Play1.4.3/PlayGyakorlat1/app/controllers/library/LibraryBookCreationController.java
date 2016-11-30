@@ -26,7 +26,7 @@ public class LibraryBookCreationController extends Controller{
 	
 	public static void createLibraryBookForm(){
 		List<Library> libraries = (List<Library>) renderArgs.get("libraries"); //ez biztos meglesz, hiszen a preparePage metódus @Before annotációval lefut a controllerünk előtt!
-		if (libraries.size() == 0){
+		if (libraries.size() == 0) {
 			flash.put("errorMessage", "Nincsenek könyvtárak!");
 			LibraryController.libraryBooks(null);
 		} else {
@@ -48,9 +48,9 @@ public class LibraryBookCreationController extends Controller{
 									){
 		
 		LibraryBookCreationValidator validator = new LibraryBookCreationValidator();
-		validator.isValidRequest(validation, libraryId, ean, pageNumber);
+		boolean isValid = validator.isValidRequest(validation, libraryId, ean, pageNumber);
 				
-		if (validation.hasErrors()){ //
+		if (isValid){ //
 			params.flash(); // add http parameters to the flash scope
 			render("@Application.library.createLibraryBook");
 		} else {
@@ -58,7 +58,7 @@ public class LibraryBookCreationController extends Controller{
 			LibraryBook libraryBook = new LibraryBook();
 			libraryBook.owningLibrary = Library.findById(libraryId);
 			libraryBook.ean = ean;
-			libraryBook.isRaktaron = isRaktaron;
+			libraryBook.isRaktaron = isRaktaron == null ? false : isRaktaron;
 			libraryBook.pageNumber = pageNumber;
 			libraryBook.title = title;
 			libraryBook.author = author;
