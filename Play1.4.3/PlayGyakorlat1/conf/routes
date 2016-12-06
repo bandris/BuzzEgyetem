@@ -15,9 +15,13 @@ GET		/deleteRandomLibrary					library.LibraryController.deleteRandomLibrary
 
 GET		/createLibrary							library.LibraryCreationController.createLibraryForm
 POST	/createLibrary							library.LibraryCreationController.createLibrary
+GET		/deleteLibrary							library.LibraryDeleteController.deleteLibrary
 
 GET		/createLibraryBook						library.LibraryBookCreationController.createLibraryBookForm
 POST	/createLibraryBook						library.LibraryBookCreationController.createLibraryBook
+GET		/deleteLibraryBook						library.LibraryBookDeleteController.deleteLibraryBook
+GET		/moveLibraryBook						library.LibraryBookMoveController.moveLibraryBookForm
+POST	/moveLibraryBook						library.LibraryBookMoveController.moveLibraryBook
 
 GET		/libraryDetails							library.LibraryDetailsControllers.libraryDetails
 # Ignore favicon requests

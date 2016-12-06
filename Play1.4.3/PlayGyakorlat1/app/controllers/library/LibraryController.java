@@ -8,6 +8,7 @@ import org.apache.commons.lang.RandomStringUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 
+import dao.library.LibraryDao;
 import models.Library;
 import models.LibraryBook;
 import play.mvc.Controller;
@@ -116,12 +117,8 @@ public class LibraryController extends Controller {
 	public static void deleteRandomLibrary(){
 		Library randomLibrary = selectRandomLibrary();
 
-		if (randomLibrary != null){
-			for (LibraryBook book : randomLibrary.books){
-				book.delete();
-			}
-			randomLibrary.delete();
-		}
+		LibraryDao dao = new LibraryDao();
+		dao.deleteLibrary(randomLibrary);
 
 		libraryBooks(null); //átirányítás
 	}
