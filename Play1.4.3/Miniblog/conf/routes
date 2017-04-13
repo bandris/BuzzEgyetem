@@ -2,9 +2,12 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-# Home page
-GET     /                                       Application.index
-GET		/admin/test								backend.BackendTest.test
+# ----- Frontend -----
+GET     /                                       frontend.FrontendMainPageController.index
+GET     /index                                  frontend.FrontendMainPageController.index
+
+# ----- Backend stuff -----
+GET		/admin/index								backend.BackendMainPageController.index
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

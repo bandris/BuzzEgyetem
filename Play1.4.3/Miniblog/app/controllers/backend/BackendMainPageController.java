@@ -5,10 +5,10 @@ import play.mvc.Controller;
 import play.mvc.With;
 
 @With(Secure.class)
-public class BackendTest extends Controller{
+public class BackendMainPageController extends Controller{
 
-	public static void test() {
-		renderText("asdasd");
+	public static void index() {
+		render("@Backend.index");
 	}
 
 }

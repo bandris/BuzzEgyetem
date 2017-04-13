@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>#{get 'title' /}</title>
+        <meta charset="${_response_encoding}">
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+   		<meta name="description" content="">
+    	<meta name="author" content="">
+	    <!-- Bootstrap Core CSS -->
+	    <link href="@{'/public/stylesheets/bootstrap.min.css'}" rel="stylesheet">
+	
+	    <!-- Custom CSS -->
+	    <link href="@{'/public/stylesheets/blog-post.css'}" rel="stylesheet">
+        #{get 'moreStyles' /}
+        <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
+    </head>
+    <body>
+        #{doLayout /}
+        
+        <script src="@{'/public/javascripts/bootstrap.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+        <script src="@{'/public/javascripts/jquery.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+        #{get 'moreScripts' /}
+    </body>
+</html>
