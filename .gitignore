@@ -6,9 +6,16 @@ Play1.4.3/.metadata
 Play1.4.3/PlayGyakorlat*/.classpath
 Play1.4.3/PlayGyakorlat*/.project
 Play1.4.3/PlayGyakorlat*/eclipse
-Play1.4.3/.recommenders/*
+Play1.4.3/.recom*/*
 .metadata
 .recommenders
 RemoteSystemsTempFiles/
 */.metadata
 */.settings
+Play1.4.3/Miniblog/.classpath
+Play1.4.3/Miniblog/.project
+Play1.4.3/Miniblog/eclipse
+Play1.4.3/Miniblog/modules/secure
+Play1.4.3/Miniblog/tmp
+Play1.4.3/Miniblog/test-result
+Play1.4.3/Miniblog/.settings
