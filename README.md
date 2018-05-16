@@ -13,7 +13,7 @@ Feltöltés folyamatos, 2016, őszi szemeszter.
 * Scrumteamek alakítása
 
 
-##Az általam közvetíteni kivánt fő értékek
+## Az általam közvetíteni kivánt fő értékek
 
 * Tanulás, mint alapvető szükséglet. Nem csak az egyetemen, minden nap ebben a szakmában
 * Közös munka - egyedül nem fog menni
